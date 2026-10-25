@@ -9,57 +9,8 @@ const audioPlayer = document.getElementById('weddingMusic');
 const musicDisc = document.getElementById('musicDisc');
 const musicStatusText = document.getElementById('musicStatusText');
 
-// Default Seed Wishes for Astri & Riyan
-const defaultWishes = [
-  {
-    id: 1,
-    nama: "Nisa & Keluarga",
-    ucapan: "Masya Allah Tabarakallah Teh Astri & Kang Riyan! Semoga dilancarkan semua persiapannya sampai hari H, menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin 🤍✨",
-    kehadiran: "1",
-    jumlah: "2",
-    time: "2 hari yang lalu"
-  },
-  {
-    id: 2,
-    nama: "Dede Kurniawan",
-    ucapan: "Selamat Riyan & Teh Astri! Turut berbahagia untuk kalian berdua. Lancar-lancar acaranya di Kawali ya bro! 🤙🏼🎉",
-    kehadiran: "1",
-    jumlah: "1",
-    time: "3 hari yang lalu"
-  },
-  {
-    id: 3,
-    nama: "Siti Rahmawati",
-    ucapan: "Selamat menempuh hidup baru sahabatku Astri. Sedih sekaligus terharu banget liat perjalanan kalian. Semoga langgeng sampai maut memisahkan yaa 🥰💐",
-    kehadiran: "1",
-    jumlah: "1",
-    time: "3 hari yang lalu"
-  },
-  {
-    id: 4,
-    nama: "Fajar Pratama",
-    ucapan: "Happy wedding buat Kang Riyan dan Teh Astri! Semoga pernikahannya penuh berkah dan cinta selalu. Insya Allah hadir bro! 🤝",
-    kehadiran: "1",
-    jumlah: "1",
-    time: "4 hari yang lalu"
-  },
-  {
-    id: 5,
-    nama: "Teh Maya",
-    ucapan: "Alhamdulillah akhirnya selamat ya neng Astri & calon suami. Semoga dilancarkan acaranya sampai selesai, sehat dan bahagia selalu sekeluarga 💕",
-    kehadiran: "1",
-    jumlah: "2",
-    time: "5 hari yang lalu"
-  },
-  {
-    id: 6,
-    nama: "Angga & Istri",
-    ucapan: "Selamat menempuh babak baru kawan! Semoga menjadi jodoh dunia akhirat dan selalu dalam lindungan Allah SWT. Selamat bro Riyan & Astri!",
-    kehadiran: "1",
-    jumlah: "2",
-    time: "6 hari yang lalu"
-  }
-];
+// Default Wishes (Clean slate - no dummy/sample wishes)
+const defaultWishes = [];
 
 // ============================================================================
 // 1. INITIALIZATION ON DOM CONTENT LOADED
@@ -67,6 +18,9 @@ const defaultWishes = [
 document.addEventListener('DOMContentLoaded', () => {
   // Lock scroll initially for cover overlay
   document.body.classList.add('lock-scroll');
+
+  // Clean up any legacy dummy sample wishes from localStorage
+  cleanupLegacySampleWishes();
 
   // Parse recipient name from URL
   parseGuestName();
@@ -110,7 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================================================
-// 2. RECIPIENT NAME URL PARSING (?kpd= or ?to= or ?nama=)
+// 2. CLEANUP LEGACY SAMPLE DATA
+// ============================================================================
+function cleanupLegacySampleWishes() {
+  const storageKey = 'wedding_wishes_astri_riyan';
+  const stored = localStorage.getItem(storageKey);
+  if (stored) {
+    // If it contains old dummy names, clear it out
+    if (stored.includes('Nisa & Keluarga') || stored.includes('Dede Kurniawan') || stored.includes('Th nurul')) {
+      localStorage.removeItem(storageKey);
+    }
+  }
+  if (localStorage.getItem('wedding_wishes_rian_evi')) {
+    localStorage.removeItem('wedding_wishes_rian_evi');
+  }
+}
+
+// ============================================================================
+// 3. RECIPIENT NAME URL PARSING (?kpd= or ?to= or ?nama=)
 // ============================================================================
 function parseGuestName() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -133,7 +104,7 @@ function parseGuestName() {
 }
 
 // ============================================================================
-// 3. OPEN INVITATION (TRANSITION & MUSIC AUTOPLAY)
+// 4. OPEN INVITATION (TRANSITION & MUSIC AUTOPLAY)
 // ============================================================================
 function openInvitation() {
   const coverOverlay = document.getElementById('coverOverlay');
@@ -164,7 +135,7 @@ function openInvitation() {
 }
 
 // ============================================================================
-// 4. BACKGROUND MUSIC CONTROLS
+// 5. BACKGROUND MUSIC CONTROLS
 // ============================================================================
 function playMusic() {
   if (audioPlayer) {
@@ -208,7 +179,7 @@ function updateMusicUI(isPlaying) {
 }
 
 // ============================================================================
-// 5. COUNTDOWN TIMER (TARGET: 13 DESEMBER 2026, 08:00 WIB)
+// 6. COUNTDOWN TIMER (TARGET: 13 DESEMBER 2026, 08:00 WIB)
 // ============================================================================
 function initCountdownTimer() {
   // Target: 13 Desember 2026, 08:00:00 WIB
@@ -243,7 +214,7 @@ function initCountdownTimer() {
 }
 
 // ============================================================================
-// 6. SAVE TO GOOGLE CALENDAR
+// 7. SAVE TO GOOGLE CALENDAR
 // ============================================================================
 function configureCalendarLink() {
   const btnCalendar = document.getElementById('btnSaveCalendar');
@@ -263,7 +234,7 @@ function configureCalendarLink() {
 }
 
 // ============================================================================
-// 7. SMOOTH NAVIGATION & SCROLLSPY
+// 8. SMOOTH NAVIGATION & SCROLLSPY
 // ============================================================================
 function scrollToSection(sectionId) {
   const target = document.getElementById(sectionId);
@@ -301,7 +272,7 @@ function initScrollSpy() {
 }
 
 // ============================================================================
-// 8. RSVP & GUESTBOOK (WISHES)
+// 9. RSVP & GUESTBOOK (WISHES)
 // ============================================================================
 function toggleGuestCount(val) {
   const groupGuest = document.getElementById('groupGuestCount');
@@ -319,7 +290,10 @@ function getStoredWishes() {
   const stored = localStorage.getItem(storageKey);
   if (stored) {
     try {
-      return JSON.parse(stored);
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
     } catch (e) {
       console.error("Error parsing stored wishes:", e);
     }
@@ -347,6 +321,19 @@ function renderWishesFeed(wishes) {
   }
 
   feedEl.innerHTML = '';
+
+  if (!wishes || wishes.length === 0) {
+    feedEl.innerHTML = `
+      <div class="empty-wishes-state">
+        <div class="empty-icon-wrap">
+          <i class="fa-regular fa-comment-dots"></i>
+        </div>
+        <p class="empty-title">Belum Ada Ucapan</p>
+        <span class="empty-desc">Jadilah yang pertama mengirimkan ucapan &amp; doa restu untuk Astri &amp; Riyan!</span>
+      </div>
+    `;
+    return;
+  }
 
   wishes.forEach(item => {
     const isHadir = item.kehadiran === '1';
@@ -443,7 +430,7 @@ function escapeHtml(str) {
 }
 
 // ============================================================================
-// 9. COPY TO CLIPBOARD FUNCTIONALITY
+// 10. COPY TO CLIPBOARD FUNCTIONALITY
 // ============================================================================
 function copyToClipboard(text, btnElement) {
   navigator.clipboard.writeText(text).then(() => {
@@ -458,7 +445,6 @@ function copyToClipboard(text, btnElement) {
       btnElement.style.color = '';
     }, 2500);
   }).catch(err => {
-    // Fallback
     const textarea = document.createElement("textarea");
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -491,7 +477,7 @@ function copyAddressToClipboard() {
 }
 
 // ============================================================================
-// 10. MODAL DIALOGS (LIGHTBOX & KADO ADDRESS)
+// 11. MODAL DIALOGS (LIGHTBOX & KADO ADDRESS)
 // ============================================================================
 function openLightbox(imgSrc) {
   const lightboxModal = document.getElementById('lightboxModal');
@@ -534,7 +520,7 @@ function closeKadoModalOnBackdrop(event) {
 }
 
 // ============================================================================
-// 11. FLOATING TOAST NOTIFICATION (POPUP UCAPAN TAMU)
+// 12. FLOATING TOAST NOTIFICATION (POPUP UCAPAN TAMU)
 // ============================================================================
 function startToastNotifications() {
   const toastEl = document.getElementById('toastNotification');
@@ -545,6 +531,7 @@ function startToastNotifications() {
 
   function showRandomToast() {
     const wishes = getStoredWishes();
+    // Do not show any toast if there are no real wishes yet!
     if (!wishes || wishes.length === 0) return;
 
     const randomIndex = Math.floor(Math.random() * wishes.length);
@@ -560,14 +547,11 @@ function startToastNotifications() {
     }, 4500);
   }
 
-  setTimeout(() => {
-    showRandomToast();
-    setInterval(showRandomToast, 8500);
-  }, 2500);
+  setInterval(showRandomToast, 9500);
 }
 
 // ============================================================================
-// 12. AMBIENT GOLDEN SPARKLES CANVAS
+// 13. AMBIENT GOLDEN SPARKLES CANVAS
 // ============================================================================
 function initAmbientSparkles() {
   const canvas = document.getElementById('ambientCanvas');
