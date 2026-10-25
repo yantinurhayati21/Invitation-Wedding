@@ -9,7 +9,7 @@
 // Masukkan URL Web App Google Apps Script Anda di sini.
 // Panduan lengkap 2 menit ada di file: google-apps-script.js
 // Contoh: const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyxxxxxxx/exec";
-const GOOGLE_SHEET_URL = "";
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzI4owA__ac8PREyoOt77I6NU_rHzuNhrk1AeEU81BdHY4JiVEVvsXizk3aHPRyX1Bo/exec";
 
 // Global State
 let isMusicPlaying = false;
