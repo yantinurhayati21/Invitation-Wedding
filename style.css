@@ -1646,86 +1646,28 @@ body.lock-scroll {
   margin: 0;
 }
 
-/* Special Wedding Gift & Personal Branding */
-.footer-creator-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(201, 150, 97, 0.35);
-  border-radius: 18px;
-  padding: 24px 20px 18px 20px;
-  margin: 0 auto 10px auto;
-  max-width: 380px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-.creator-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--gold-gradient);
-  color: var(--mahogany-deep);
-  font-family: var(--font-cinzel);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 20px;
-  margin-bottom: 14px;
-  box-shadow: 0 4px 12px rgba(201, 150, 97, 0.3);
-}
-
-.creator-note {
-  font-size: 0.85rem;
-  line-height: 1.65;
-  color: #FDF9F6;
-  margin-bottom: 16px;
-}
-
-.creator-note b {
-  color: var(--gold-light);
-  font-weight: 600;
-}
-
-.creator-order-box {
-  background: rgba(42, 20, 16, 0.6);
-  border: 1px dashed rgba(201, 150, 97, 0.4);
-  border-radius: 14px;
-  padding: 16px 14px;
-  margin-bottom: 16px;
-}
-
-.order-prompt {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
-
-.btn-creator-ig {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
-  color: #FFFFFF !important;
-  text-decoration: none;
+/* Simple Creator Credit */
+.footer-simple-gift {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
-  padding: 9px 20px;
-  border-radius: 25px;
-  box-shadow: 0 4px 15px rgba(221, 42, 123, 0.4);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 10px;
 }
 
-.btn-creator-ig:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(221, 42, 123, 0.65);
+.creator-link {
+  color: var(--gold-light);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border-bottom: 1px dotted var(--gold-light);
+  padding-bottom: 1px;
 }
 
-.btn-creator-ig i {
-  font-size: 1.1rem;
+.creator-link:hover {
+  color: #FFFFFF;
+  border-bottom-style: solid;
+  text-shadow: 0 0 10px rgba(229, 194, 143, 0.7);
 }
 
 /* --------------------------------------------------------------------------
