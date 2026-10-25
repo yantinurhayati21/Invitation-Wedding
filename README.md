@@ -1,125 +1,82 @@
-# 💍 Undangan Pernikahan Digital - The Wedding of Rian & Evi
+# 💍 Undangan Pernikahan Digital - The Wedding of Astri & Riyan (Mahogany Luxury Edition)
 
-Website undangan pernikahan online (digital wedding invitation) yang elegan, modern, dan responsif. Didesain terinspirasi dari template **Indoinvite (Pandora Classic)** dengan palet warna rose gold / champagne hangat, animasi floral bergoyang, audio background, galeri foto lightbox, amplop digital, countdown, serta sistem RSVP & ucapan langsung.
-
----
-
-## ✨ Fitur Utama
-
-1. **Cover Amplop Interaktif (Buka Undangan)**:
-   - Dilengkapi ornamen floral di sudut-sudut dengan animasi mengayun lembut (*swaying leaves*).
-   - Menampilkan nama tamu undangan secara otomatis dari link URL parameter (misal: `?kpd=Yanti+Nurhayati` atau `?to=Nama+Tamu`).
-   - Tombol **"Buka Undangan"** yang membuka kunci halaman secara halus dan otomatis memutar musik latar (*background music*).
-
-2. **Countdown Timer & Simpan ke Kalender**:
-   - Hitung mundur live waktu (Hari, Jam, Menit, Detik) menuju hari H pernikahan.
-   - Tombol **"Save To Calendar"** yang langsung menghubungkan ke Google Calendar dengan detail acara yang sudah terisi otomatis.
-
-3. **Kutipan Suci Al-Qur'an**:
-   - Surah Ar-Rum ayat 21 dalam tulisan kaligrafi Arab yang indah, terjemahan bahasa Indonesia, dan kartu kaca transparan (*frosted glass*).
-
-4. **Profil Mempelai (Bride & Groom)**:
-   - Foto mempelai pria dan wanita dalam bingkai lingkaran emas floral dekoratif.
-   - Informasi lengkap nama, orang tua, dan alamat asal kedua mempelai.
-   - Tautan langsung ke profil Instagram kedua mempelai.
-
-5. **Rangkaian Acara (Save The Date)**:
-   - Kartu acara Resepsi Pernikahan dan Ngunduh Mantu lengkap dengan tanggal, jam, dan lokasi.
-   - Tombol **"Maps Lokasi Acara"** terintegrasi ke Google Maps.
-
-6. **Galeri Foto (Our Gallery)**:
-   - Tampilan foto grid responsif.
-   - Dilengkapi fitur **Lightbox Zoom Modal** saat foto diklik untuk melihat dalam ukuran penuh (*fullscreen*).
-
-7. **Buku Tamu & Konfirmasi Kehadiran (RSVP)**:
-   - Formulir konfirmasi kehadiran (Hadir / Tidak Hadir) dan jumlah tamu yang datang.
-   - Kotak ucapan dan doa restu.
-   - Menyimpan ucapan secara real-time ke *LocalStorage*, sehingga ucapan baru langsung muncul di bagian atas buku tamu.
-   - Sudah terisi *seed data* ucapan asli dari sahabat dan keluarga.
-
-8. **Notifikasi Toast Mengambang (Floating Toast Wishes)**:
-   - Setiap beberapa detik, ucapan selamat dari tamu akan muncul secara otomatis di sudut kiri bawah layar layaknya di Indoinvite asli.
-
-9. **Titip Hadiah & Kado Digital (Cashless)**:
-   - Nomor rekening / e-wallet DANA untuk kedua mempelai.
-   - Tombol **"Salin Nomor"** dengan feedback animasi "Tersalin!".
-   - Fitur **"Kirim Kado Fisik"** yang menampilkan modal alamat pengiriman lengkap beserta tombol salin alamat dan konfirmasi WhatsApp.
-
-10. **Sticky Bottom Navigation & Pemutar Musik**:
-    - Navigasi melayang di bawah layar untuk berpindah cepat ke Beranda, Mempelai, Acara, Galeri, dan Ucapan.
-    - Tombol kontrol audio dengan ikon piringan hitam (*vinyl disc*) yang berputar saat musik diputar dan berhenti saat dijeda.
+Website undangan pernikahan digital (*online wedding invitation*) bertema **Mahogany Luxury** yang hangat, estetik, dan elegan untuk **Astri Dianti & Riyan Febriana Fawzi**.
 
 ---
 
-## 🚀 Cara Menjalankan Secara Lokal
+## 🌟 Fitur Unggulan
 
-Anda tidak memerlukan server khusus. Karena dibuat murni dengan **HTML5, CSS3, dan Vanilla JavaScript**, Anda cukup:
-1. Buka file `index.html` langsung di browser Anda (Google Chrome, Edge, Safari, Firefox), ATAU
-2. Jika menggunakan VS Code, klik kanan `index.html` lalu pilih **Open with Live Server**, ATAU
-3. Jalankan server lokal sederhana lewat terminal:
-   ```bash
-   npx serve .
+1. **Tema Mahogany Luxury & Editorial Modern**:
+   - Palet warna kaya kayu mahoni (*deep mahogany* `#2A1410`), *terracotta*, dan kilau aksen emas (*gold foil* `#C99661`).
+   - Bingkai lengkungan arsitektur modern (*Bohemian / Moroccan Arch*) bergaris ganda emas.
+   - Tipografi mewah: **Cinzel**, **Pinyon Script**, dan **Cormorant Garamond**.
+   - Animasi partikel debu kilau emas (*ambient golden sparkles*) yang melayang anggun di latar belakang.
+   - Segel lilin emas (*wax seal*) monogram **A & R** yang berkedip halus pada cover.
+
+2. **Cover Amplop Interaktif (Nama Tamu Dinamis)**:
+   - Nama tamu otomatis menyesuaikan tautan URL, misal: `?kpd=Yanti+Nurhayati` atau `?kpd=Bapak+Budi+Sekeluarga`.
+   - Tombol **"Buka Undangan"** dengan transisi lembut yang membuka kunci halaman dan langsung memutar musik latar (*background music*).
+
+3. **Informasi Mempelai & Akad/Resepsi Lengkap**:
+   - **Mempelai Wanita**: Astri Dianti (Putri pertama dari Bapak Dadi & Ibu Tati).
+   - **Mempelai Pria**: Riyan Febriana Fawzi (Putra kedua dari Bapak Ayat Surdrajat & Ibu Erna Hasanah (Almh)).
+   - **Akad Nikah**: Minggu, 13 Desember 2026, 08:00 WIB - Selesai di Dusun Kiaralawang RT 1/RW 2, Kec. Kawali, Kab. Ciamis.
+   - **Resepsi**: Minggu, 13 Desember 2026, 11:00 WIB - Selesai di Dusun Kiaralawang RT 1/RW 2, Kec. Kawali, Kab. Ciamis.
+   - Terintegrasi langsung dengan **Google Maps** dan tombol **"Simpan ke Google Calendar"**.
+
+4. **Amplop Digital - Kartu ATM BRI Mewah**:
+   - Tampilan kartu bank bertekstur mahoni gelap dengan chip emas *EMV*:
+     - **Bank**: **BRI**
+     - **Nomor Rekening**: `7458 0101 1891 537`
+     - **Atas Nama**: **ASTRI DIANTI**
+     - Tombol **"Salin Nomor Rekening BRI"** instan dengan feedback notifikasi.
+   - Catatan ramah nomor rekening mempelai pria menyusul.
+   - Modal pop-up alamat pengiriman kado fisik dengan tombol salin alamat.
+
+5. **Integrasi Google Sheets (Buku Tamu Online Real-Time)**:
+   - Setiap ucapan dan konfirmasi kehadiran yang dikirim oleh tamu di berbagai HP dapat **langsung otomatis tersimpan ke Google Spreadsheet Anda** dan **muncul ke semua orang**.
+   - Dilengkapi file panduan siap pakai: [`google-apps-script.js`](file:///c:/Invitation-Wedding/google-apps-script.js).
+
+---
+
+## 📊 Cara Menyambungkan Buku Tamu ke Google Sheets (2 Menit)
+
+1. Buka [Google Sheets](https://sheets.google.com) lalu buat Spreadsheet baru (beri judul misal: *Buku Tamu Astri & Riyan*).
+2. Di menu atas, klik **Extensions (Ekstensi)** ➡️ **Apps Script**.
+3. Buka file [**`google-apps-script.js`**](file:///c:/Invitation-Wedding/google-apps-script.js) di proyek ini, copy seluruh kodenya, lalu paste ke editor Google Apps Script tersebut.
+4. Klik tombol **Save** (ikon disket / Ctrl + S).
+5. Klik tombol **Deploy** (biru di pojok kanan atas) ➡️ **New deployment**:
+   - Select type: **Web app**
+   - Execute as: **Me (email Anda)**
+   - Who has access: **Anyone** (*PENTING: pilih Anyone / Siapa saja*)
+   - Klik **Deploy**.
+6. Klik **Authorize access** ➡️ pilih akun Google Anda ➡️ klik **Advanced** ➡️ **Go to Untitled project (unsafe)** ➡️ klik **Allow**.
+7. Salin **Web app URL** yang muncul (yang berakhiran `/exec`).
+8. Buka file [**`script.js`**](file:///c:/Invitation-Wedding/script.js), tempelkan URL tersebut pada baris:
+   ```javascript
+   const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyxxxxxxx/exec";
    ```
-   Lalu buka URL `http://localhost:3000` di browser.
+Selesai! Sekarang semua tamu yang mengisi ucapan akan langsung masuk ke spreadsheet Anda dan muncul di semua perangkat tamu lain.
 
-### Menguji Nama Tamu Undangan
-Cukup tambahkan query `?kpd=` di belakang URL:
+---
+
+## 🧪 Menjalankan Secara Lokal
+
+Buka terminal di folder `C:\Invitation-Wedding`:
+```powershell
+python -m http.server 3000
 ```
-http://localhost:3000/?kpd=Yanti+Nurhayati
-http://localhost:3000/?kpd=Bapak+Budi+Sekeluarga
+Lalu buka di browser:  
+[http://localhost:3000/?kpd=Yanti+Nurhayati](http://localhost:3000/?kpd=Yanti+Nurhayati)
+
+---
+
+## 🚀 Deploy ke Vercel (Saat Anda Siap)
+
+Proyek ini sudah dilengkapi konfigurasi `vercel.json` dan `package.json`.
+
+```bash
+git remote add origin https://github.com/USERNAME-ANDA/NAMA-REPO.git
+git push -u origin main
 ```
-
----
-
-## 🌐 Cara Deploy ke Vercel (Gratis & Cepat)
-
-Proyek ini sudah dilengkapi dengan file `vercel.json` dan `package.json` sehingga dapat langsung dideploy ke Vercel tanpa konfigurasi tambahan apa pun.
-
-### Opsi 1: Lewat GitHub (Sangat Disarankan)
-1. Buat repository baru di akun GitHub Anda (misal: `undangan-rian-evi`).
-2. Masukkan file proyek ini ke dalam git repository Anda:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit wedding invitation"
-   git branch -M main
-   git remote add origin https://github.com/USERNAME-ANDA/undangan-rian-evi.git
-   git push -u origin main
-   ```
-3. Buka situs [Vercel.com](https://vercel.com) dan login/daftar.
-4. Klik tombol **"Add New..."** -> **"Project"**.
-5. Pilih repository GitHub Anda, lalu klik **"Deploy"**.
-6. Dalam hitungan detik (~15-30 detik), website undangan Anda sudah aktif dengan domain gratis seperti:
-   `https://undangan-rian-evi.vercel.app`
-
-### Opsi 2: Lewat Vercel CLI (Langsung dari Terminal)
-1. Buka PowerShell atau Terminal di direktori proyek ini (`c:\Invitation-Wedding`).
-2. Jalankan perintah:
-   ```bash
-   npx vercel
-   ```
-3. Ikuti petunjuk singkat di layar (tekan Enter untuk pilihan default).
-4. Untuk deploy ke production:
-   ```bash
-   npx vercel --prod
-   ```
-
----
-
-## 🎨 Cara Kustomisasi Data Acara
-
-Semua data pernikahan dapat Anda sesuaikan dengan mudah:
-
-| Elemen | Lokasi Pengubahan |
-| :--- | :--- |
-| **Nama Mempelai & Judul** | Buka `index.html`, cari teks `Evi & Rian` atau `The Wedding of Rian & Evi`. |
-| **Tanggal & Jam Acara** | Buka `index.html` (bagian `#acara`) dan `script.js` (pada fungsi `initCountdownTimer`). |
-| **Nomor Rekening / DANA** | Buka `index.html` di bagian `#hadiah` dan ganti nomor `081224714665` atau `081322756820`. |
-| **Alamat Pengiriman Kado** | Buka `index.html` di modal `#kadoModal` (cari teks `#fullAddress`). |
-| **Lagu / Musik Latar** | Buka `index.html`, ganti tag `<source src="...">` pada elemen `<audio id="weddingMusic">` dengan tautan file audio MP3/MP4 pilihan Anda. |
-| **Foto-foto Galeri & Sampul** | Ganti URL gambar pada tag `<img>` atau `style="background-image: url(...)"` di `index.html`. |
-
----
-
-## 📄 Lisensi
-Hak Cipta &copy; 2025. Dibuat dengan cinta untuk pernikahan Rian & Evi. Bebas digunakan dan dimodifikasi.
+Lalu sambungkan repository tersebut di dashboard [Vercel.com](https://vercel.com) untuk deploy gratis instan!

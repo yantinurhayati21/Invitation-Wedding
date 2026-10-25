@@ -1,7 +1,15 @@
 /**
  * THE WEDDING OF ASTRI DIANTI & RIYAN FEBRIANA FAWZI
- * Mahogany Luxury Edition - Interactive Script
+ * Mahogany Luxury Edition - Interactive Script with Google Sheets Integration
  */
+
+// ============================================================================
+// CONFIGURATION: GOOGLE SHEETS ENDPOINT URL
+// ============================================================================
+// Masukkan URL Web App Google Apps Script Anda di sini.
+// Panduan lengkap 2 menit ada di file: google-apps-script.js
+// Contoh: const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyxxxxxxx/exec";
+const GOOGLE_SHEET_URL = "";
 
 // Global State
 let isMusicPlaying = false;
@@ -41,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Countdown Timer for 13 Desember 2026
   initCountdownTimer();
 
-  // Load and Render Wishes
+  // Load and Render Wishes (Fetches live from Google Sheets if configured)
   loadWishes();
 
   // Configure Save to Google Calendar link
@@ -70,7 +78,6 @@ function cleanupLegacySampleWishes() {
   const storageKey = 'wedding_wishes_astri_riyan';
   const stored = localStorage.getItem(storageKey);
   if (stored) {
-    // If it contains old dummy names, clear it out
     if (stored.includes('Nisa & Keluarga') || stored.includes('Dede Kurniawan') || stored.includes('Th nurul')) {
       localStorage.removeItem(storageKey);
     }
@@ -91,9 +98,7 @@ function parseGuestName() {
   const rsvpNamaEl = document.getElementById('rsvpNama');
 
   if (guestName) {
-    // Replace '+' with space and decode
     guestName = decodeURIComponent(guestName.replace(/\+/g, ' ')).trim();
-    // Sanitize basic tags
     guestName = guestName.replace(/<[^>]*>?/gm, '');
 
     if (guestRecipientEl) guestRecipientEl.textContent = guestName;
@@ -182,7 +187,6 @@ function updateMusicUI(isPlaying) {
 // 6. COUNTDOWN TIMER (TARGET: 13 DESEMBER 2026, 08:00 WIB)
 // ============================================================================
 function initCountdownTimer() {
-  // Target: 13 Desember 2026, 08:00:00 WIB
   const targetDate = new Date('2026-12-13T08:00:00+07:00').getTime();
 
   const daysEl = document.getElementById('days');
@@ -224,7 +228,6 @@ function configureCalendarLink() {
   const eventDetails = encodeURIComponent("Pernikahan Astri Dianti & Riyan Febriana Fawzi. Bertempat di Dusun Kiaralawang RT 1/RW 2, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat.");
   const eventLocation = encodeURIComponent("Dusun Kiaralawang RT 1/RW 2, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat");
   
-  // Format: YYYYMMDDTHHMMSSZ (13 Desember 2026, 08:00 WIB -> 01:00 UTC)
   const startTime = "20261213T010000Z";
   const endTime = "20261213T100000Z";
 
@@ -272,7 +275,7 @@ function initScrollSpy() {
 }
 
 // ============================================================================
-// 9. RSVP & GUESTBOOK (WISHES)
+// 9. RSVP & GUESTBOOK (WISHES & GOOGLE SHEETS SYNC)
 // ============================================================================
 function toggleGuestCount(val) {
   const groupGuest = document.getElementById('groupGuestCount');
@@ -305,7 +308,25 @@ function saveWishesToStorage(wishes) {
   localStorage.setItem('wedding_wishes_astri_riyan', JSON.stringify(wishes));
 }
 
-function loadWishes() {
+// Load wishes: if GOOGLE_SHEET_URL is set, fetch from Google Sheets; otherwise use local storage
+async function loadWishes() {
+  if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL.trim() !== "") {
+    try {
+      const response = await fetch(GOOGLE_SHEET_URL);
+      if (response.ok) {
+        const liveWishes = await response.json();
+        if (Array.isArray(liveWishes)) {
+          saveWishesToStorage(liveWishes);
+          renderWishesFeed(liveWishes);
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn("Gagal memuat ucapan dari Google Sheet, menggunakan cadangan lokal:", err);
+    }
+  }
+
+  // Fallback to local storage
   const wishes = getStoredWishes();
   renderWishesFeed(wishes);
 }
@@ -359,7 +380,7 @@ function renderWishesFeed(wishes) {
   });
 }
 
-function handleRsvpSubmit(e) {
+async function handleRsvpSubmit(e) {
   e.preventDefault();
 
   const namaInput = document.getElementById('rsvpNama');
@@ -382,41 +403,56 @@ function handleRsvpSubmit(e) {
   // Button loading state
   if (btnSubmit) {
     btnSubmit.disabled = true;
-    btnSubmit.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Mengirim Doa...</span>`;
+    btnSubmit.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Menyimpan Doa...</span>`;
   }
 
-  setTimeout(() => {
-    const currentWishes = getStoredWishes();
+  const newWish = {
+    id: Date.now(),
+    nama: nama,
+    ucapan: ucapan,
+    kehadiran: kehadiran,
+    jumlah: jumlah,
+    time: "Baru saja"
+  };
 
-    const newWish = {
-      id: Date.now(),
-      nama: nama,
-      ucapan: ucapan,
-      kehadiran: kehadiran,
-      jumlah: jumlah,
-      time: "Baru saja"
-    };
+  // Instantly render in UI so there is zero delay for the user
+  const currentWishes = getStoredWishes();
+  currentWishes.unshift(newWish);
+  saveWishesToStorage(currentWishes);
+  renderWishesFeed(currentWishes);
 
-    currentWishes.unshift(newWish);
-    saveWishesToStorage(currentWishes);
-    renderWishesFeed(currentWishes);
-
-    if (btnSubmit) {
-      btnSubmit.disabled = false;
-      btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Kirim Konfirmasi &amp; Doa</span>`;
+  // Send to Google Sheets if configured
+  if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL.trim() !== "") {
+    try {
+      await fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newWish)
+      });
+    } catch (err) {
+      console.warn("Pengiriman data ke Google Sheet menemui kendala:", err);
     }
+  }
 
-    ucapanInput.value = '';
-    kehadiranInput.value = '';
-    toggleGuestCount('');
+  // Reset form
+  if (btnSubmit) {
+    btnSubmit.disabled = false;
+    btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Kirim Konfirmasi &amp; Doa</span>`;
+  }
 
-    if (alertSuccess) {
-      alertSuccess.style.display = 'flex';
-      setTimeout(() => {
-        alertSuccess.style.display = 'none';
-      }, 5000);
-    }
-  }, 600);
+  ucapanInput.value = '';
+  kehadiranInput.value = '';
+  toggleGuestCount('');
+
+  if (alertSuccess) {
+    alertSuccess.style.display = 'flex';
+    setTimeout(() => {
+      alertSuccess.style.display = 'none';
+    }, 5000);
+  }
 }
 
 function escapeHtml(str) {
@@ -531,7 +567,6 @@ function startToastNotifications() {
 
   function showRandomToast() {
     const wishes = getStoredWishes();
-    // Do not show any toast if there are no real wishes yet!
     if (!wishes || wishes.length === 0) return;
 
     const randomIndex = Math.floor(Math.random() * wishes.length);
