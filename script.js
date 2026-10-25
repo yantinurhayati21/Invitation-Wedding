@@ -1,6 +1,6 @@
 /**
- * THE WEDDING OF RIAN & EVI
- * Main Interactive Application Script
+ * THE WEDDING OF ASTRI DIANTI & RIYAN FEBRIANA FAWZI
+ * Mahogany Luxury Edition - Interactive Script
  */
 
 // Global State
@@ -9,87 +9,55 @@ const audioPlayer = document.getElementById('weddingMusic');
 const musicDisc = document.getElementById('musicDisc');
 const musicStatusText = document.getElementById('musicStatusText');
 
-// Default Seed Wishes (Authentic messages from guests)
+// Default Seed Wishes for Astri & Riyan
 const defaultWishes = [
   {
     id: 1,
-    nama: "Th nurul",
-    ucapan: "Slamat menempuh hidup baru buat bestyyykuuuu, campur aduk rasanya antara seneng dan sedihh. Intinya lancar sampe hari-H 🥰🤗",
+    nama: "Nisa & Keluarga",
+    ucapan: "Masya Allah Tabarakallah Teh Astri & Kang Riyan! Semoga dilancarkan semua persiapannya sampai hari H, menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin 🤍✨",
     kehadiran: "1",
-    jumlah: "1",
+    jumlah: "2",
     time: "2 hari yang lalu"
   },
   {
     id: 2,
-    nama: "hani",
-    ucapan: "hadir ga hadir tapi insyaallah diusahakan..., tapi selamattt sudah mau menikahh, samawa eviii 🫶🏻",
-    kehadiran: "0",
-    jumlah: "0",
-    time: "2 hari yang lalu"
+    nama: "Dede Kurniawan",
+    ucapan: "Selamat Riyan & Teh Astri! Turut berbahagia untuk kalian berdua. Lancar-lancar acaranya di Kawali ya bro! 🤙🏼🎉",
+    kehadiran: "1",
+    jumlah: "1",
+    time: "3 hari yang lalu"
   },
   {
     id: 3,
-    nama: "Salfa",
-    ucapan: "yeyyy akhirnyaa selamat yaa teh evii semogaa lancar sampai hari h ❤️❤️❤️ spertinya aku tidak bisa hadir :((",
-    kehadiran: "0",
-    jumlah: "0",
+    nama: "Siti Rahmawati",
+    ucapan: "Selamat menempuh hidup baru sahabatku Astri. Sedih sekaligus terharu banget liat perjalanan kalian. Semoga langgeng sampai maut memisahkan yaa 🥰💐",
+    kehadiran: "1",
+    jumlah: "1",
     time: "3 hari yang lalu"
   },
   {
     id: 4,
-    nama: "Dina aulia",
-    ucapan: "Masya allahhh seng 🥺🫶🏻, lancar-lancar sampai hari h 💗",
+    nama: "Fajar Pratama",
+    ucapan: "Happy wedding buat Kang Riyan dan Teh Astri! Semoga pernikahannya penuh berkah dan cinta selalu. Insya Allah hadir bro! 🤝",
     kehadiran: "1",
     jumlah: "1",
-    time: "3 hari yang lalu"
+    time: "4 hari yang lalu"
   },
   {
     id: 5,
-    nama: "Rian fauzi",
-    ucapan: "Wilujeng vi, lancar-lancar smpe hari H 🤙🏼🙏🏼",
-    kehadiran: "0",
-    jumlah: "0",
-    time: "4 hari yang lalu"
+    nama: "Teh Maya",
+    ucapan: "Alhamdulillah akhirnya selamat ya neng Astri & calon suami. Semoga dilancarkan acaranya sampai selesai, sehat dan bahagia selalu sekeluarga 💕",
+    kehadiran: "1",
+    jumlah: "2",
+    time: "5 hari yang lalu"
   },
   {
     id: 6,
-    nama: "Rida",
-    ucapan: "Masyaallahh barakallah vii ♥️🫂 ikut seneng denger kabar bahagia ini, semoga dimudahkan dan dilancarkan niat baiknya aamiin ya Alloh",
+    nama: "Angga & Istri",
+    ucapan: "Selamat menempuh babak baru kawan! Semoga menjadi jodoh dunia akhirat dan selalu dalam lindungan Allah SWT. Selamat bro Riyan & Astri!",
     kehadiran: "1",
-    jumlah: "1",
-    time: "4 hari yang lalu"
-  },
-  {
-    id: 7,
-    nama: "Alumni 9A: Dinda",
-    ucapan: "Lancar sampai hari-H eviii, semoga jadi pasangan yang samawa sampai akhir hayat 🤲🏼 Untuk kehadiran insyaallah diusahakan, soalnya lagi masa² akhir magang ❤️",
-    kehadiran: "1",
-    jumlah: "1",
-    time: "5 hari yang lalu"
-  },
-  {
-    id: 8,
-    nama: "TITIM ROHAENI",
-    ucapan: "Sedih banget rasanya melepas sahabat dari kecil untuk menikah 🥺 tapi gpp asal jangan lupa ya kalau sahabat seperti ku tidak ada yang sama 🥰 semoga samawa ya Ceu selamat menempuh hidup baru",
-    kehadiran: "1",
-    jumlah: "5",
-    time: "5 hari yang lalu"
-  },
-  {
-    id: 9,
-    nama: "Bumil kadal",
-    ucapan: "Awww semogaa lancarr, sakinah mawadah warahmah 🥰🤲🏼 insyaallah hadir gmna kondisi utunn 😁🥹",
-    kehadiran: "1",
-    jumlah: "1",
+    jumlah: "2",
     time: "6 hari yang lalu"
-  },
-  {
-    id: 10,
-    nama: "Jihan feriska",
-    ucapan: "Finally, beb ikut bahagia for you, kaget banget secepet ini. Lancar sampai hari h ya! Love u 🥺🤍",
-    kehadiran: "1",
-    jumlah: "1",
-    time: "1 minggu yang lalu"
   }
 ];
 
@@ -108,18 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
       duration: 1000,
       once: false,
-      offset: 60,
+      offset: 50,
       easing: 'ease-out-cubic'
     });
   }
 
-  // Initialize Countdown Timer
+  // Initialize Ambient Sparkles Canvas
+  initAmbientSparkles();
+
+  // Initialize Countdown Timer for 13 Desember 2026
   initCountdownTimer();
 
   // Load and Render Wishes
   loadWishes();
 
-  // Configure Save to Calendar link
+  // Configure Save to Google Calendar link
   configureCalendarLink();
 
   // Setup Cover Open Button
@@ -175,7 +146,7 @@ function openInvitation() {
     coverOverlay.classList.add('cover-hidden');
     setTimeout(() => {
       coverOverlay.style.display = 'none';
-    }, 850);
+    }, 900);
   }
 
   // Play background music
@@ -185,7 +156,7 @@ function openInvitation() {
   if (typeof AOS !== 'undefined') {
     setTimeout(() => {
       AOS.refresh();
-    }, 400);
+    }, 450);
   }
 
   // Start animated toast notifications
@@ -201,7 +172,7 @@ function playMusic() {
       isMusicPlaying = true;
       updateMusicUI(true);
     }).catch(err => {
-      console.warn("Autoplay audio blocked or pending user interaction:", err);
+      console.warn("Autoplay audio blocked or waiting for user gesture:", err);
       isMusicPlaying = false;
       updateMusicUI(false);
     });
@@ -237,11 +208,11 @@ function updateMusicUI(isPlaying) {
 }
 
 // ============================================================================
-// 5. COUNTDOWN TIMER
+// 5. COUNTDOWN TIMER (TARGET: 13 DESEMBER 2026, 08:00 WIB)
 // ============================================================================
 function initCountdownTimer() {
-  // Target Wedding Date: October 1, 2025 at 07:00:00 WIB
-  const targetDate = new Date('2025-10-01T07:00:00+07:00').getTime();
+  // Target: 13 Desember 2026, 08:00:00 WIB
+  const targetDate = new Date('2026-12-13T08:00:00+07:00').getTime();
 
   const daysEl = document.getElementById('days');
   const hoursEl = document.getElementById('hours');
@@ -252,7 +223,6 @@ function initCountdownTimer() {
     const now = new Date().getTime();
     let distance = targetDate - now;
 
-    // If target date has passed, keep values at 00 or calculate anniversary
     if (distance < 0) {
       distance = 0;
     }
@@ -279,13 +249,13 @@ function configureCalendarLink() {
   const btnCalendar = document.getElementById('btnSaveCalendar');
   if (!btnCalendar) return;
 
-  const eventTitle = encodeURIComponent("The Wedding of Rian & Evi");
-  const eventDetails = encodeURIComponent("Pernikahan Rian Hidayat & Evi Siti Fatimah. Bertempat di Dusun Sukamaju Rt/Rw 26/12 Desa Talagasari, Kec. Kawali, Kab. Ciamis.");
-  const eventLocation = encodeURIComponent("Dusun Sukamaju Rt/Rw 26/12 Desa Talagasari, Kec. Kawali, Kab. Ciamis");
+  const eventTitle = encodeURIComponent("The Wedding of Astri & Riyan");
+  const eventDetails = encodeURIComponent("Pernikahan Astri Dianti & Riyan Febriana Fawzi. Bertempat di Dusun Kiaralawang RT 1/RW 2, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat.");
+  const eventLocation = encodeURIComponent("Dusun Kiaralawang RT 1/RW 2, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat");
   
-  // Format: YYYYMMDDTHHMMSSZ
-  const startTime = "20251001T000000Z";
-  const endTime = "20251001T100000Z";
+  // Format: YYYYMMDDTHHMMSSZ (13 Desember 2026, 08:00 WIB -> 01:00 UTC)
+  const startTime = "20261213T010000Z";
+  const endTime = "20261213T100000Z";
 
   const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&dates=${startTime}/${endTime}&details=${eventDetails}&location=${eventLocation}`;
 
@@ -308,7 +278,7 @@ function initScrollSpy() {
 
   window.addEventListener('scroll', () => {
     let currentId = '';
-    const scrollPosition = window.pageYOffset + 220;
+    const scrollPosition = window.pageYOffset + 240;
 
     sections.forEach(sec => {
       const top = sec.offsetTop;
@@ -345,7 +315,8 @@ function toggleGuestCount(val) {
 }
 
 function getStoredWishes() {
-  const stored = localStorage.getItem('wedding_wishes_rian_evi');
+  const storageKey = 'wedding_wishes_astri_riyan';
+  const stored = localStorage.getItem(storageKey);
   if (stored) {
     try {
       return JSON.parse(stored);
@@ -357,7 +328,7 @@ function getStoredWishes() {
 }
 
 function saveWishesToStorage(wishes) {
-  localStorage.setItem('wedding_wishes_rian_evi', JSON.stringify(wishes));
+  localStorage.setItem('wedding_wishes_astri_riyan', JSON.stringify(wishes));
 }
 
 function loadWishes() {
@@ -384,16 +355,16 @@ function renderWishesFeed(wishes) {
     const initial = (item.nama || 'T').charAt(0).toUpperCase();
 
     const wishItem = document.createElement('div');
-    wishItem.className = 'wish-item';
+    wishItem.className = 'wish-single-card';
     wishItem.innerHTML = `
-      <div class="wish-avatar">${initial}</div>
-      <div class="wish-content">
-        <div class="wish-header">
-          <span class="wish-author">${escapeHtml(item.nama)}</span>
-          <span class="wish-badge ${badgeClass}">${badgeText}</span>
+      <div class="wish-initial-badge">${initial}</div>
+      <div class="wish-detail-body">
+        <div class="wish-meta-row">
+          <span class="wish-user-name">${escapeHtml(item.nama)}</span>
+          <span class="attendance-tag ${badgeClass}">${badgeText}</span>
         </div>
-        <p class="wish-text">${escapeHtml(item.ucapan)}</p>
-        <span class="wish-time"><i class="fa-regular fa-clock"></i> ${item.time || 'Baru saja'}</span>
+        <p class="wish-message-body">${escapeHtml(item.ucapan)}</p>
+        <span class="wish-timestamp"><i class="fa-regular fa-clock"></i> ${item.time || 'Baru saja'}</span>
       </div>
     `;
 
@@ -424,7 +395,7 @@ function handleRsvpSubmit(e) {
   // Button loading state
   if (btnSubmit) {
     btnSubmit.disabled = true;
-    btnSubmit.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Mengirim...</span>`;
+    btnSubmit.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Mengirim Doa...</span>`;
   }
 
   setTimeout(() => {
@@ -439,24 +410,19 @@ function handleRsvpSubmit(e) {
       time: "Baru saja"
     };
 
-    // Prepend to list
     currentWishes.unshift(newWish);
     saveWishesToStorage(currentWishes);
-
-    // Re-render wishes
     renderWishesFeed(currentWishes);
 
-    // Reset button & form
     if (btnSubmit) {
       btnSubmit.disabled = false;
-      btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Kirim Konfirmasi &amp; Ucapan</span>`;
+      btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Kirim Konfirmasi &amp; Doa</span>`;
     }
 
     ucapanInput.value = '';
     kehadiranInput.value = '';
     toggleGuestCount('');
 
-    // Show success alert
     if (alertSuccess) {
       alertSuccess.style.display = 'flex';
       setTimeout(() => {
@@ -482,16 +448,17 @@ function escapeHtml(str) {
 function copyToClipboard(text, btnElement) {
   navigator.clipboard.writeText(text).then(() => {
     const originalHtml = btnElement.innerHTML;
-    btnElement.innerHTML = `<i class="fa-solid fa-check"></i> <span>Tersalin!</span>`;
-    btnElement.style.backgroundColor = '#28a745';
+    btnElement.innerHTML = `<i class="fa-solid fa-check"></i> <span>Nomor BRI Tersalin!</span>`;
+    btnElement.style.background = '#2E7D32';
+    btnElement.style.color = '#FFFFFF';
 
     setTimeout(() => {
       btnElement.innerHTML = originalHtml;
-      btnElement.style.backgroundColor = '';
-    }, 2000);
+      btnElement.style.background = '';
+      btnElement.style.color = '';
+    }, 2500);
   }).catch(err => {
-    console.error("Gagal menyalin text:", err);
-    // Fallback for older browsers
+    // Fallback
     const textarea = document.createElement("textarea");
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -500,12 +467,14 @@ function copyToClipboard(text, btnElement) {
     document.body.removeChild(textarea);
 
     const originalHtml = btnElement.innerHTML;
-    btnElement.innerHTML = `<i class="fa-solid fa-check"></i> <span>Tersalin!</span>`;
-    btnElement.style.backgroundColor = '#28a745';
+    btnElement.innerHTML = `<i class="fa-solid fa-check"></i> <span>Nomor BRI Tersalin!</span>`;
+    btnElement.style.background = '#2E7D32';
+    btnElement.style.color = '#FFFFFF';
     setTimeout(() => {
       btnElement.innerHTML = originalHtml;
-      btnElement.style.backgroundColor = '';
-    }, 2000);
+      btnElement.style.background = '';
+      btnElement.style.color = '';
+    }, 2500);
   });
 }
 
@@ -536,7 +505,7 @@ function openLightbox(imgSrc) {
 
 function closeLightbox(event) {
   if (event && event.target && event.target.id === 'lightboxImg') {
-    return; // Don't close if clicking the image itself
+    return;
   }
   const lightboxModal = document.getElementById('lightboxModal');
   if (lightboxModal) {
@@ -591,9 +560,70 @@ function startToastNotifications() {
     }, 4500);
   }
 
-  // Initial delay then repeat every 8 seconds
   setTimeout(() => {
     showRandomToast();
     setInterval(showRandomToast, 8500);
   }, 2500);
+}
+
+// ============================================================================
+// 12. AMBIENT GOLDEN SPARKLES CANVAS
+// ============================================================================
+function initAmbientSparkles() {
+  const canvas = document.getElementById('ambientCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
+  const particles = [];
+  const particleCount = 28;
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 2.5 + 1,
+      speedX: (Math.random() - 0.5) * 0.4,
+      speedY: -Math.random() * 0.6 - 0.2,
+      opacity: Math.random() * 0.7 + 0.3,
+      pulse: Math.random() * 0.02 + 0.01
+    });
+  }
+
+  function renderSparkles() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (let p of particles) {
+      p.x += p.speedX;
+      p.y += p.speedY;
+      p.opacity += Math.sin(Date.now() * 0.002) * 0.01;
+
+      if (p.y < -10) {
+        p.y = height + 10;
+        p.x = Math.random() * width;
+      }
+      if (p.x < -10) p.x = width + 10;
+      if (p.x > width + 10) p.x = -10;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(201, 150, 97, ${Math.max(0.15, Math.min(0.85, p.opacity))})`;
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = "#F3DCB8";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    requestAnimationFrame(renderSparkles);
+  }
+
+  renderSparkles();
 }

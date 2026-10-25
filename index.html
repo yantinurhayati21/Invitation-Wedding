@@ -5,24 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>The Wedding of Rian &amp; Evi</title>
+  <title>The Wedding of Astri &amp; Riyan</title>
   
   <!-- SEO & Social Media Meta Tags (Open Graph) -->
-  <meta name="description" content="The Wedding of Rian &amp; Evi. Merupakan Suatu Kebahagiaan dan Kehormatan bagi Kami apabila Anda berkenan hadir di hari bahagia kami.">
+  <meta name="description" content="The Wedding of Astri Dianti &amp; Riyan Febriana Fawzi - Minggu, 13 Desember 2026. Merupakan Suatu Kehormatan dan Kebahagiaan bagi Kami apabila Anda berkenan hadir dan memberikan doa restu.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Wedding of Rian &amp; Evi">
-  <meta property="og:description" content="The Wedding of Rian &amp; Evi - Undangan Pernikahan Digital">
-  <meta property="og:image" content="https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/sampul_10950041758260167.jpeg">
-  <meta property="og:url" content="https://wedding-rian-evi.vercel.app">
-  <meta name="theme-color" content="#ae8f7a">
+  <meta property="og:title" content="The Wedding of Astri &amp; Riyan">
+  <meta property="og:description" content="Undangan Pernikahan Digital Astri Dianti &amp; Riyan Febriana Fawzi">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80">
+  <meta property="og:url" content="https://wedding-astri-riyan.vercel.app">
+  <meta name="theme-color" content="#4A2820">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://indoinvite.com/images/favicon_indoinvite/favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Luxury Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sacramento&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -33,54 +33,97 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="lock-scroll">
+
+  <!-- Ambient Golden Sparkles Canvas -->
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
 
   <!-- Background Music Audio Element -->
   <audio id="weddingMusic" loop preload="auto">
-    <source src="https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/theme/music/1659168655.mp4" type="audio/mp4">
     <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-wedding-harp-and-strings-1002.mp3" type="audio/mpeg">
+    <source src="https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/theme/music/1659168655.mp4" type="audio/mp4">
   </audio>
 
   <!-- ==============================================
        COVER / ENVELOPE SCREEN (SCREEN AWAL)
   =============================================== -->
   <div id="coverOverlay" class="cover-screen">
-    <!-- Corner Floral Ornaments -->
-    <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-AKR.webp" alt="Ornament Top Left" class="ornament ornament-top-left sway-1">
-    <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-AKN.webp" alt="Ornament Top Right" class="ornament ornament-top-right sway-2">
-    <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKR.webp" alt="Ornament Bottom Left" class="ornament ornament-bottom-left sway-1">
-    <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKN.webp" alt="Ornament Bottom Right" class="ornament ornament-bottom-right sway-2">
+    <!-- Luxury Mahogany Background Accents -->
+    <div class="cover-bg-glow"></div>
+    
+    <!-- Botanical Corner Accents (Gold Foil Silhouette) -->
+    <div class="botanical-corner top-left">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,90 Q30,40 90,10 Q50,40 10,90 Z" fill="url(#goldGrad)" opacity="0.4"/>
+        <path d="M15,85 Q40,45 80,25 Q50,55 15,85 Z" fill="url(#goldGrad)" opacity="0.3"/>
+        <path d="M5,95 C45,80 75,50 95,5 C70,45 40,75 5,95 Z" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+        <defs>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E5C28F"/>
+            <stop offset="0.5" stop-color="#C99661"/>
+            <stop offset="1" stop-color="#8F5E36"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="botanical-corner top-right">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M90,90 Q70,40 10,10 Q50,40 90,90 Z" fill="url(#goldGrad2)" opacity="0.4"/>
+        <path d="M95,95 C55,80 25,50 5,5 C30,45 60,75 95,95 Z" stroke="url(#goldGrad2)" stroke-width="1.5" opacity="0.6"/>
+        <defs>
+          <linearGradient id="goldGrad2" x1="100" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E5C28F"/>
+            <stop offset="0.5" stop-color="#C99661"/>
+            <stop offset="1" stop-color="#8F5E36"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
 
     <div class="cover-content" data-aos="zoom-in" data-aos-duration="1200">
-      <p class="cover-subtitle">We Invite You To</p>
       
-      <!-- Photo with decorative border -->
-      <div class="photo-frame-wrapper">
-        <div class="photo-circle" style="background-image: url('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/sampul_10950041758260167.jpeg');"></div>
-        <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-Bor.webp" alt="Frame Border" class="frame-border">
+      <!-- Monogram Seal -->
+      <div class="monogram-seal">
+        <div class="monogram-inner">
+          <span>A &amp; R</span>
+        </div>
       </div>
 
-      <h1 class="couple-title">Evi &amp; Rian</h1>
+      <p class="cover-eyebrow">THE WEDDING INVITATION</p>
       
-      <p class="invitation-note">
-        Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami.
+      <h1 class="couple-script-title">Astri &amp; Riyan</h1>
+      
+      <p class="cover-date-badge">
+        <i class="fa-regular fa-calendar-star"></i> MINGGU, 13 DESEMBER 2026
       </p>
 
-      <div class="guest-box">
-        <span class="guest-to">Kepada Yth.</span>
-        <h3 id="guestRecipient" class="guest-name">Tamu Undangan</h3>
+      <!-- Arch Prewedding Photo Frame -->
+      <div class="arch-frame-wrapper">
+        <div class="arch-photo-container">
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Prewedding Astri & Riyan" class="arch-photo">
+          <div class="arch-photo-overlay"></div>
+        </div>
+        <div class="arch-gold-border"></div>
       </div>
 
-      <button id="btnOpenInvitation" class="btn-open-invitation" type="button">
-        <i class="fa-solid fa-envelope-open-text"></i>
-        <span>Buka Undangan</span>
+      <div class="guest-card-glass">
+        <span class="guest-salutation">Kepada Yth. Bapak/Ibu/Saudara/i:</span>
+        <h3 id="guestRecipient" class="guest-recipient-name">Tamu Undangan</h3>
+        <p class="guest-subtext">Mohon maaf apabila ada kesalahan penulisan nama/gelar</p>
+      </div>
+
+      <button id="btnOpenInvitation" class="btn-open-wax" type="button">
+        <span class="btn-icon-wrapper">
+          <i class="fa-solid fa-envelope-open-text"></i>
+        </span>
+        <span class="btn-text">Buka Undangan</span>
       </button>
     </div>
   </div>
 
 
   <!-- ==============================================
-       MAIN INVITATION WRAPPER
+       MAIN INVITATION WRAPPER (MOBILE FRAME)
   =============================================== -->
   <main class="main-container" id="mainContainer">
 
@@ -88,136 +131,138 @@
          SECTION 1: HERO & COUNTDOWN
     =========================================== -->
     <section id="home" class="section section-hero text-center">
-      <!-- Top Ornaments -->
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-AKR.webp" alt="" class="ornament ornament-top-left sway-1">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-AKN.webp" alt="" class="ornament ornament-top-right sway-2">
+      <div class="hero-decorative-arch"></div>
 
-      <div class="hero-content">
-        <!-- Photo with decorative border -->
-        <div class="photo-frame-wrapper" data-aos="zoom-in" data-aos-duration="1000">
-          <div class="photo-circle" style="background-image: url('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/sampul_10950041758260167.jpeg');"></div>
-          <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-Bor.webp" alt="" class="frame-border">
+      <div class="content-wrapper">
+        <div class="hero-crest" data-aos="zoom-in" data-aos-duration="1000">
+          <span class="crest-monogram">A &bull; R</span>
         </div>
 
-        <h1 class="main-heading" data-aos="fade-down" data-aos-duration="1000">The Wedding of Rian &amp; Evi</h1>
+        <p class="section-tagline" data-aos="fade-down">WE ARE GETTING MARRIED</p>
+        <h1 class="main-couple-title" data-aos="fade-up" data-aos-duration="1000">Astri Dianti<br><span class="and-sym">&amp;</span><br>Riyan Febriana Fawzi</h1>
+        <p class="main-wedding-date" data-aos="fade-up">Minggu, 13 Desember 2026</p>
 
-        <!-- Surah Ar-Rum: 21 -->
-        <div class="holy-verse-card" data-aos="fade-up" data-aos-duration="1200">
-          <p class="arabic-text">
+        <!-- Main Arch Hero Image -->
+        <div class="hero-arch-showcase" data-aos="zoom-in" data-aos-duration="1200">
+          <div class="showcase-inner">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Prewedding Astri & Riyan Mahogany" class="showcase-img">
+            <div class="showcase-gradient"></div>
+          </div>
+          <div class="showcase-border"></div>
+        </div>
+
+        <!-- Surah Ar-Rum: 21 Card -->
+        <div class="mahogany-card verse-card" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card-ornament-top">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <p class="arabic-script">
             وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
           </p>
-          <p class="verse-translation">
-            "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+          <div class="gold-divider-line"></div>
+          <p class="verse-quote">
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
           </p>
-          <span class="verse-reference"><b>- Q.S. Ar-Rum : 21 -</b></span>
+          <span class="verse-cite">QS. Ar-Rum Ayat 21</span>
         </div>
 
         <!-- Countdown Timer -->
-        <div class="countdown-container" data-aos="fade-up" data-aos-duration="1000">
-          <h4 class="countdown-title">Menuju Hari Bahagia</h4>
-          <div class="timer-grid" id="timerGrid">
-            <div class="timer-box">
-              <span id="days" class="timer-num">00</span>
-              <span class="timer-label">Hari</span>
+        <div class="countdown-section" data-aos="fade-up" data-aos-duration="1000">
+          <h4 class="countdown-headline">MENGHITUNG HARI BAHAGIA</h4>
+          <div class="countdown-grid" id="timerGrid">
+            <div class="countdown-col">
+              <div class="countdown-card">
+                <span id="days" class="time-digit">00</span>
+              </div>
+              <span class="time-text">HARI</span>
             </div>
-            <div class="timer-box">
-              <span id="hours" class="timer-num">00</span>
-              <span class="timer-label">Jam</span>
+            <div class="countdown-col">
+              <div class="countdown-card">
+                <span id="hours" class="time-digit">00</span>
+              </div>
+              <span class="time-text">JAM</span>
             </div>
-            <div class="timer-box">
-              <span id="minutes" class="timer-num">00</span>
-              <span class="timer-label">Menit</span>
+            <div class="countdown-col">
+              <div class="countdown-card">
+                <span id="minutes" class="time-digit">00</span>
+              </div>
+              <span class="time-text">MENIT</span>
             </div>
-            <div class="timer-box">
-              <span id="seconds" class="timer-num">00</span>
-              <span class="timer-label">Detik</span>
+            <div class="countdown-col">
+              <div class="countdown-card">
+                <span id="seconds" class="time-digit">00</span>
+              </div>
+              <span class="time-text">DETIK</span>
             </div>
           </div>
 
-          <a id="btnSaveCalendar" href="#" class="btn-save-calendar" target="_blank" rel="noopener">
-            <i class="fa-regular fa-calendar-plus"></i> Save To Calendar
+          <a id="btnSaveCalendar" href="#" class="btn-mahogany-outline" target="_blank" rel="noopener">
+            <i class="fa-regular fa-calendar-plus"></i> Simpan ke Google Calendar
           </a>
         </div>
 
-        <!-- Mouse Scroll Down Indicator -->
-        <div class="mouse-scroll-indicator" onclick="scrollToSection('mempelai')">
-          <div class="mouse">
-            <div class="wheel"></div>
-          </div>
-          <div class="scroll-arrows">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <!-- Scroll Down Cue -->
+        <div class="scroll-down-cue" onclick="scrollToSection('mempelai')">
+          <span>Gulir ke Bawah</span>
+          <i class="fa-solid fa-chevron-down bounce-arrow"></i>
         </div>
       </div>
-
-      <!-- Bottom Ornaments -->
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKR.webp" alt="" class="ornament ornament-bottom-left sway-1">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKN.webp" alt="" class="ornament ornament-bottom-right sway-2">
     </section>
 
 
     <!-- ==========================================
-         SECTION 2: MEMPELAI (BRIDE & GROOM)
+         SECTION 2: MEMPELAI (THE COUPLE)
     =========================================== -->
     <section id="mempelai" class="section section-mempelai text-center">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-AKR.webp" alt="" class="ornament ornament-top-left sway-1">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-AKN.webp" alt="" class="ornament ornament-top-right sway-2">
-
       <div class="content-wrapper">
-        <p class="salam-arabic" data-aos="fade-down">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+        <p class="bismillah-calligraphy" data-aos="fade-down">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+        <p class="salam-text" data-aos="fade-up">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
 
-        <p class="intro-text" data-aos="fade-up">
-          Atas Berkah dan Rahmat Allah Subhanahu Wa Ta'ala, tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri acara pernikahan kami:
+        <p class="invitation-intro" data-aos="fade-up">
+          Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami:
         </p>
 
-        <!-- Mempelai Wanita -->
-        <div class="profile-card" data-aos="fade-up" data-aos-duration="1000">
-          <div class="photo-frame-wrapper">
-            <div class="photo-circle" style="background-image: url('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/foto_wanita_10950041758260355.webp');"></div>
-            <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-Bor.webp" alt="" class="frame-border">
+        <!-- Mempelai Wanita: Astri Dianti -->
+        <div class="couple-profile-box" data-aos="fade-up" data-aos-duration="1000">
+          <div class="profile-arch-frame">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Astri Dianti" class="profile-img">
+            <div class="profile-arch-border"></div>
           </div>
 
-          <h2 class="person-name">Evi Siti Fatimah</h2>
-          <div class="person-bio">
-            <p class="bio-line">Anak keempat dari pasangan</p>
-            <p class="bio-parents"><b>Bapak Nana Suryana (Nana Pete)</b> &amp; <b>Ibu Ipah Syarifah (Almh)</b></p>
-            <p class="bio-address"><i class="fa-solid fa-location-dot"></i> Dusun Sukamaju Rt/Rw 26/12 Desa Talagasari, Kec. Kawali, Kab. Ciamis</p>
+          <h2 class="mempelai-display-name">Astri Dianti</h2>
+          <div class="mempelai-desc">
+            <p class="child-status">Anak Pertama dari Pasangan</p>
+            <p class="parents-name">Bapak Dadi <br>&amp; Ibu Tati</p>
+            <p class="origin-address">
+              <i class="fa-solid fa-location-dot"></i> Dusun Kiaralawang RT 1/RW 2, Kec. Kawali, Kab. Ciamis, Jawa Barat
+            </p>
           </div>
-
-          <a href="https://instagram.com/Fatimahevi4321" target="_blank" rel="noopener" class="btn-instagram">
-            <i class="fa-brands fa-instagram"></i>
-            <span>@Fatimahevi4321</span>
-          </a>
         </div>
 
-        <!-- Separator & -->
-        <div class="separator-ampersand" data-aos="zoom-in">&amp;</div>
+        <!-- Elegant Separator -->
+        <div class="monogram-middle-separator" data-aos="zoom-in">
+          <div class="separator-line"></div>
+          <span class="middle-ampersand">&amp;</span>
+          <div class="separator-line"></div>
+        </div>
 
-        <!-- Mempelai Pria -->
-        <div class="profile-card" data-aos="fade-up" data-aos-duration="1000">
-          <div class="photo-frame-wrapper">
-            <div class="photo-circle" style="background-image: url('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/foto_pria_10950041758260250.webp');"></div>
-            <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-Bor.webp" alt="" class="frame-border">
+        <!-- Mempelai Pria: Riyan Febriana Fawzi -->
+        <div class="couple-profile-box" data-aos="fade-up" data-aos-duration="1000">
+          <div class="profile-arch-frame">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Riyan Febriana Fawzi" class="profile-img">
+            <div class="profile-arch-border"></div>
           </div>
 
-          <h2 class="person-name">Rian Hidayat</h2>
-          <div class="person-bio">
-            <p class="bio-line">Anak Pertama dari Pasangan</p>
-            <p class="bio-parents"><b>Bapak Dede</b> &amp; <b>Ibu Nia Aniah (Ani)</b></p>
-            <p class="bio-address"><i class="fa-solid fa-location-dot"></i> Dusun Ciroyom Rt/Rw 04/10 Desa Kiarapayung, Kec. Rancah, Kab. Ciamis</p>
+          <h2 class="mempelai-display-name">Riyan Febriana Fawzi</h2>
+          <div class="mempelai-desc">
+            <p class="child-status">Anak Kedua dari Pasangan</p>
+            <p class="parents-name">Bapak Ayat Surdrajat <br>&amp; Ibu Erna Hasanah (Almh)</p>
+            <p class="origin-address">
+              <i class="fa-solid fa-location-dot"></i> Dusun Kiaralawang RT 1/RW 2, Kec. Kawali, Kab. Ciamis, Jawa Barat
+            </p>
           </div>
-
-          <a href="https://instagram.com/ri.anhhdyt" target="_blank" rel="noopener" class="btn-instagram">
-            <i class="fa-brands fa-instagram"></i>
-            <span>@ri.anhhdyt</span>
-          </a>
         </div>
       </div>
-
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKR.webp" alt="" class="ornament ornament-bottom-left sway-1">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKN.webp" alt="" class="ornament ornament-bottom-right sway-2">
     </section>
 
 
@@ -225,106 +270,128 @@
          SECTION 3: RANGKAIAN ACARA (SAVE THE DATE)
     =========================================== -->
     <section id="acara" class="section section-acara text-center">
-      <!-- Wave Top Decoration -->
-      <div class="wave-header">
-        <svg viewBox="0 0 1000 100" preserveAspectRatio="none" class="wave-svg">
-          <path fill="#ae8f7a" opacity="0.4" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
-          <path fill="#ae8f7a" opacity="0.7" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
-          <path fill="#ae8f7a" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
-        </svg>
-      </div>
-
       <div class="content-wrapper">
-        <h1 class="section-title" data-aos="zoom-in">Save The Date</h1>
-        <p class="section-subtitle" data-aos="fade-up">Rangkaian Acara Pernikahan Kami</p>
+        <p class="section-tagline" data-aos="fade-down">RANGKAIAN MOMEN SPESIAL</p>
+        <h2 class="section-title-serif" data-aos="fade-up">Agenda Pernikahan</h2>
+        <p class="section-subtitle-text" data-aos="fade-up">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir di acara kami:
+        </p>
 
-        <!-- Acara 1: Resepsi Pernikahan -->
-        <div class="event-card" data-aos="fade-up" data-aos-duration="1000">
-          <div class="event-badge"><i class="fa-solid fa-rings-wedding"></i></div>
-          <h2 class="event-name">Resepsi Pernikahan</h2>
-          <div class="event-divider"></div>
-          
-          <h3 class="event-date">
-            <i class="fa-regular fa-calendar-check"></i> Rabu, 01 Oktober 2025
-          </h3>
-          <p class="event-time">
-            <i class="fa-regular fa-clock"></i> Pukul 07:00 WIB Sampai Selesai
-          </p>
-          <p class="event-venue">
-            <i class="fa-solid fa-map-pin"></i> Dusun Sukamaju Rt/Rw 26/12 Desa Talagasari, Kec. Kawali, Kab. Ciamis
-          </p>
+        <!-- Card 1: Akad Nikah -->
+        <div class="mahogany-card event-mahogany-card" data-aos="fade-up" data-aos-duration="1000">
+          <div class="event-ribbon">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <h3 class="event-title">Akad Nikah</h3>
+          <div class="event-divider-ornament"></div>
 
-          <a href="https://maps.app.goo.gl/GYeinku6iEuut7wr7" target="_blank" rel="noopener" class="btn-event-maps">
-            <i class="fa-solid fa-map-location-dot"></i> Maps Lokasi Acara
+          <div class="event-time-row">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Minggu, 13 Desember 2026</span>
+          </div>
+
+          <div class="event-time-row clock">
+            <i class="fa-regular fa-clock"></i>
+            <span>Pukul 08:00 WIB - Selesai</span>
+          </div>
+
+          <div class="event-location-box">
+            <p class="loc-name">Lokasi Acara:</p>
+            <p class="loc-detail">
+              <b>Dusun Kiaralawang RT 1/RW 2</b><br>
+              Desa/Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat
+            </p>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Dusun+Kiaralawang+Kawali+Ciamis" target="_blank" rel="noopener" class="btn-event-action">
+            <i class="fa-solid fa-map-location-dot"></i> Lihat Petunjuk Lokasi Maps
           </a>
         </div>
 
-        <!-- Acara 2: Ngunduh Mantu -->
-        <div class="event-card" data-aos="fade-up" data-aos-duration="1000">
-          <div class="event-badge"><i class="fa-solid fa-house-chimney-heart"></i></div>
-          <h2 class="event-name">Ngunduh Mantu</h2>
-          <div class="event-divider"></div>
+        <!-- Card 2: Resepsi Pernikahan -->
+        <div class="mahogany-card event-mahogany-card" data-aos="fade-up" data-aos-duration="1000">
+          <div class="event-ribbon">
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <h3 class="event-title">Resepsi Pernikahan</h3>
+          <div class="event-divider-ornament"></div>
 
-          <h3 class="event-date">
-            <i class="fa-regular fa-calendar-check"></i> Kamis, 02 Oktober 2025
-          </h3>
-          <p class="event-time">
-            <i class="fa-regular fa-clock"></i> Pukul 09:00 WIB Sampai Selesai
-          </p>
-          <p class="event-venue">
-            <i class="fa-solid fa-map-pin"></i> Dusun Ciroyom Rt/Rw 04/10 Desa Kiarapayung, Kec. Rancah, Kab. Ciamis
-          </p>
+          <div class="event-time-row">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Minggu, 13 Desember 2026</span>
+          </div>
 
-          <a href="https://maps.app.goo.gl/GYeinku6iEuut7wr7" target="_blank" rel="noopener" class="btn-event-maps">
-            <i class="fa-solid fa-map-location-dot"></i> Maps Lokasi Acara
+          <div class="event-time-row clock">
+            <i class="fa-regular fa-clock"></i>
+            <span>Pukul 11:00 WIB - Selesai</span>
+          </div>
+
+          <div class="event-location-box">
+            <p class="loc-name">Lokasi Acara:</p>
+            <p class="loc-detail">
+              <b>Dusun Kiaralawang RT 1/RW 2</b><br>
+              Desa/Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat
+            </p>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Dusun+Kiaralawang+Kawali+Ciamis" target="_blank" rel="noopener" class="btn-event-action">
+            <i class="fa-solid fa-map-location-dot"></i> Lihat Petunjuk Lokasi Maps
           </a>
         </div>
 
-        <div class="event-closing-note" data-aos="zoom-in">
+        <!-- Protocol & Note -->
+        <div class="protocol-box" data-aos="zoom-in">
+          <i class="fa-solid fa-heart-circle-check"></i>
           <p>
-            Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
+            Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Terima kasih atas ketulusan dan perhatian yang diberikan.
           </p>
         </div>
       </div>
-
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKR.webp" alt="" class="ornament ornament-bottom-left sway-1">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKN.webp" alt="" class="ornament ornament-bottom-right sway-2">
     </section>
 
 
     <!-- ==========================================
-         SECTION 4: OUR GALLERY
+         SECTION 4: PREWEDDING GALLERY (MAHOGANY EDITION)
     =========================================== -->
     <section id="galeri" class="section section-galeri text-center">
       <div class="content-wrapper">
-        <h2 class="gallery-title" data-aos="fade-up">Our Gallery</h2>
-        <p class="gallery-subtitle" data-aos="fade-up">Kenangan Manis Perjalanan Cinta Kami</p>
+        <p class="section-tagline" data-aos="fade-down">POTRET KEBAHAGIAAN</p>
+        <h2 class="section-title-serif" data-aos="fade-up">Galeri Momen</h2>
+        <p class="section-subtitle-text" data-aos="fade-up">Momen hangat penuh makna dalam langkah menuju ikrar suci</p>
 
-        <div class="gallery-grid" id="galleryGrid" data-aos="fade-up">
-          <div class="gallery-item" onclick="openLightbox('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_010950041758260433.webp')">
-            <img src="https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_010950041758260433.webp" alt="Wedding Moment 1" loading="lazy">
-            <div class="gallery-overlay">
+        <div class="mahogany-gallery-grid" data-aos="fade-up">
+          <div class="gallery-photo-card large" onclick="openLightbox('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Prewedding Astri & Riyan 1" loading="lazy">
+            <div class="photo-card-hover">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>Perbesar Foto</span>
+            </div>
+          </div>
+
+          <div class="gallery-photo-card" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Prewedding Astri & Riyan 2" loading="lazy">
+            <div class="photo-card-hover">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
             </div>
           </div>
 
-          <div class="gallery-item" onclick="openLightbox('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_010950041758260487.webp')">
-            <img src="https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_010950041758260487.webp" alt="Wedding Moment 2" loading="lazy">
-            <div class="gallery-overlay">
+          <div class="gallery-photo-card" onclick="openLightbox('https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80" alt="Prewedding Astri & Riyan 3" loading="lazy">
+            <div class="photo-card-hover">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
             </div>
           </div>
 
-          <div class="gallery-item" onclick="openLightbox('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/sampul_10950041758260167.jpeg')">
-            <img src="https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/sampul_10950041758260167.jpeg" alt="Wedding Moment 3" loading="lazy">
-            <div class="gallery-overlay">
+          <div class="gallery-photo-card" onclick="openLightbox('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Prewedding Astri & Riyan 4" loading="lazy">
+            <div class="photo-card-hover">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
             </div>
           </div>
 
-          <div class="gallery-item" onclick="openLightbox('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/foto_wanita_10950041758260355.webp')">
-            <img src="https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/foto_wanita_10950041758260355.webp" alt="Wedding Moment 4" loading="lazy">
-            <div class="gallery-overlay">
+          <div class="gallery-photo-card" onclick="openLightbox('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80" alt="Prewedding Astri & Riyan 5" loading="lazy">
+            <div class="photo-card-hover">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
             </div>
           </div>
@@ -334,50 +401,48 @@
 
 
     <!-- ==========================================
-         SECTION 5: RSVP & UCAPAN DOA
+         SECTION 5: RSVP & GUESTBOOK (DOA RESTU)
     =========================================== -->
     <section id="ucapan" class="section section-ucapan text-center">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-AKR.webp" alt="" class="ornament ornament-top-left sway-1">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-AKN.webp" alt="" class="ornament ornament-top-right sway-2">
-
       <div class="content-wrapper">
-        <h2 class="section-title" data-aos="fade-up">Kehadiran &amp; Doa</h2>
-        <p class="section-subtitle" data-aos="fade-up">Kirimkan konfirmasi kehadiran &amp; doa restu Anda</p>
+        <p class="section-tagline" data-aos="fade-down">KONFIRMASI KEHADIRAN</p>
+        <h2 class="section-title-serif" data-aos="fade-up">RSVP &amp; Doa Restu</h2>
+        <p class="section-subtitle-text" data-aos="fade-up">Kirimkan doa dan konfirmasi kehadiran Anda untuk Astri &amp; Riyan</p>
 
         <!-- RSVP Form Card -->
-        <div class="rsvp-card" data-aos="fade-up" data-aos-duration="1000">
+        <div class="mahogany-card rsvp-form-card" data-aos="fade-up" data-aos-duration="1000">
           <form id="rsvpForm">
-            <div class="form-group">
-              <label for="rsvpNama">Nama Anda</label>
-              <div class="input-wrapper">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" id="rsvpNama" name="nama" placeholder="Masukkan nama Anda" required maxlength="50">
+            <div class="form-group-mahogany">
+              <label for="rsvpNama">Nama Lengkap</label>
+              <div class="input-mahogany-box">
+                <i class="fa-solid fa-user-pen"></i>
+                <input type="text" id="rsvpNama" name="nama" placeholder="Tuliskan nama Anda" required maxlength="50">
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-mahogany">
               <label for="rsvpUcapan">Ucapan &amp; Doa Restu</label>
-              <div class="input-wrapper">
-                <i class="fa-solid fa-pen-fancy"></i>
-                <textarea id="rsvpUcapan" name="ucapan" rows="3" placeholder="Tuliskan ucapan dan doa terbaik Anda untuk kedua mempelai..." required></textarea>
+              <div class="input-mahogany-box textarea-box">
+                <i class="fa-solid fa-pen-nib"></i>
+                <textarea id="rsvpUcapan" name="ucapan" rows="3" placeholder="Tuliskan pesan, ucapan selamat, dan doa kebaikan..." required></textarea>
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-mahogany">
               <label for="rsvpKehadiran">Konfirmasi Kehadiran</label>
-              <div class="input-wrapper">
-                <i class="fa-solid fa-clipboard-check"></i>
+              <div class="input-mahogany-box">
+                <i class="fa-solid fa-check-to-slot"></i>
                 <select id="rsvpKehadiran" name="kehadiran" required onchange="toggleGuestCount(this.value)">
-                  <option value="" disabled selected>Pilih Konfirmasi Kehadiran</option>
-                  <option value="1">Hadir</option>
-                  <option value="0">Tidak Hadir / Berhalangan</option>
+                  <option value="" disabled selected>Pilih Kehadiran</option>
+                  <option value="1">Ya, Saya Akan Hadir</option>
+                  <option value="0">Maaf, Belum Bisa Hadir</option>
                 </select>
               </div>
             </div>
 
-            <div class="form-group" id="groupGuestCount" style="display: none;">
-              <label for="rsvpJumlah">Jumlah Tamu yang Hadir</label>
-              <div class="input-wrapper">
+            <div class="form-group-mahogany" id="groupGuestCount" style="display: none;">
+              <label for="rsvpJumlah">Jumlah Tamu</label>
+              <div class="input-mahogany-box">
                 <i class="fa-solid fa-users"></i>
                 <select id="rsvpJumlah" name="jumlah">
                   <option value="1" selected>1 Orang</option>
@@ -389,87 +454,105 @@
               </div>
             </div>
 
-            <button type="submit" id="btnSubmitRsvp" class="btn-submit-rsvp">
+            <button type="submit" id="btnSubmitRsvp" class="btn-mahogany-solid">
               <i class="fa-solid fa-paper-plane"></i>
-              <span>Kirim Konfirmasi &amp; Ucapan</span>
+              <span>Kirim Konfirmasi &amp; Doa</span>
             </button>
           </form>
 
-          <!-- Success Alert Message -->
-          <div id="rsvpSuccessAlert" class="alert-success-msg" style="display: none;">
+          <!-- Alert Success -->
+          <div id="rsvpSuccessAlert" class="alert-mahogany-success" style="display: none;">
             <i class="fa-solid fa-circle-check"></i>
-            <span>Terima kasih! Ucapan dan konfirmasi kehadiran Anda telah tersimpan.</span>
+            <span>Terima kasih banyak! Ucapan &amp; konfirmasi kehadiran Anda telah tersimpan.</span>
           </div>
         </div>
 
-        <!-- Guestbook / Wishes Feed -->
-        <div class="guestbook-container" data-aos="fade-up">
-          <div class="guestbook-header">
-            <h3><i class="fa-solid fa-comments"></i> Buku Tamu &amp; Doa Restu</h3>
-            <span id="wishesCount" class="badge-count">10 Ucapan</span>
+        <!-- Wishes Feed / Guestbook List -->
+        <div class="wishes-display-wrapper" data-aos="fade-up">
+          <div class="wishes-top-bar">
+            <h4><i class="fa-solid fa-message-heart"></i> Buku Tamu &amp; Doa</h4>
+            <span id="wishesCount" class="wishes-badge">0 Ucapan</span>
           </div>
 
-          <div id="wishesFeed" class="wishes-feed">
-            <!-- Dynamic comments injected via script.js -->
+          <div id="wishesFeed" class="wishes-stream">
+            <!-- Dynamic wishes rendered by script.js -->
           </div>
         </div>
       </div>
-
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKR.webp" alt="" class="ornament ornament-bottom-left sway-1">
-      <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-BKN.webp" alt="" class="ornament ornament-bottom-right sway-2">
     </section>
 
 
     <!-- ==========================================
-         SECTION 6: TITIP HADIAH / TANDA KASIH
+         SECTION 6: TANDA KASIH (AMPLOP DIGITAL)
     =========================================== -->
     <section id="hadiah" class="section section-hadiah text-center">
       <div class="content-wrapper">
-        <h2 class="section-title" data-aos="fade-up">Titip Hadiah</h2>
-        <div class="hadiah-intro" data-aos="fade-up">
+        <p class="section-tagline" data-aos="fade-down">TANDA KASIH CASHLESS</p>
+        <h2 class="section-title-serif" data-aos="fade-up">Amplop Digital</h2>
+        <p class="section-subtitle-text" data-aos="fade-up">
+          Doa restu Anda merupakan karunia yang paling bermakna bagi kami. Namun jika ingin memberikan tanda kasih secara cashless, Anda dapat menyalurkannya melalui rekening berikut:
+        </p>
+
+        <!-- LUXURY BANK CARD BRI: ASTRI DIANTI -->
+        <div class="luxury-atm-card" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="atm-card-inner">
+            <div class="atm-card-top">
+              <!-- Bank BRI Logo / Crest -->
+              <div class="bank-brand-badge">
+                <span class="bank-name-text">BANK BRI</span>
+              </div>
+              <div class="contactless-icon">
+                <i class="fa-solid fa-wifi fa-rotate-90"></i>
+              </div>
+            </div>
+
+            <!-- Gold EMV Chip Simulation -->
+            <div class="emv-gold-chip">
+              <div class="chip-lines"></div>
+            </div>
+
+            <!-- Account Number -->
+            <div class="atm-account-number" id="rekBriAstri">
+              7458 0101 1891 537
+            </div>
+
+            <div class="atm-card-bottom">
+              <div class="card-holder-info">
+                <span class="holder-label">NAMA PEMILIK REKENING</span>
+                <span class="holder-name">ASTRI DIANTI</span>
+              </div>
+              <div class="card-validity">
+                <span class="holder-label">BANK</span>
+                <span class="holder-name">BRI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-copy-bank" onclick="copyToClipboard('745801011891537', this)">
+          <i class="fa-regular fa-copy"></i>
+          <span>Salin Nomor Rekening BRI</span>
+        </button>
+
+        <!-- Note Catin Cowo -->
+        <div class="catin-cowo-notice" data-aos="fade-up">
+          <i class="fa-solid fa-circle-info"></i>
           <p>
-            Doa restu Bapak/Ibu sekalian merupakan karunia yang sangat berarti bagi kami. Dan jika memberi merupakan ungkapan tanda kasih, Bapak/Ibu dapat memberi kado secara cashless. Terima kasih.
+            <b>Catatan:</b> Nomor rekening mempelai pria sedang dipersiapkan. Untuk sementara, tanda kasih dapat disalurkan melalui rekening mempelai wanita di atas.
           </p>
         </div>
 
-        <div class="rekening-wrapper">
-          <!-- DANA Account 1 -->
-          <div class="rekening-card" data-aos="fade-up" data-aos-duration="800">
-            <div class="rekening-header">
-              <img src="https://indoinvite.com/nikah/bank/dana.png" alt="DANA" class="bank-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg'">
-            </div>
-            <div class="rekening-info">
-              <span class="rekening-num" id="rek1">081224714665</span>
-              <span class="rekening-name">a.n. Evi Siti Fatimah</span>
-            </div>
-            <button class="btn-copy-rek" onclick="copyToClipboard('081224714665', this)">
-              <i class="fa-regular fa-copy"></i>
-              <span>Salin Nomor</span>
-            </button>
+        <!-- Physical Gift Box Option -->
+        <div class="mahogany-card physical-gift-box" data-aos="fade-up">
+          <div class="gift-icon-glow">
+            <i class="fa-solid fa-gift"></i>
           </div>
-
-          <!-- DANA Account 2 -->
-          <div class="rekening-card" data-aos="fade-up" data-aos-duration="1000">
-            <div class="rekening-header">
-              <img src="https://indoinvite.com/nikah/bank/dana.png" alt="DANA" class="bank-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg'">
-            </div>
-            <div class="rekening-info">
-              <span class="rekening-num" id="rek2">081322756820</span>
-              <span class="rekening-name">a.n. Rian Hidayat</span>
-            </div>
-            <button class="btn-copy-rek" onclick="copyToClipboard('081322756820', this)">
-              <i class="fa-regular fa-copy"></i>
-              <span>Salin Nomor</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Physical Gift Box -->
-        <div class="physical-gift-card" data-aos="fade-up">
-          <img src="https://indoinvite.com/kado-c.gif" alt="Gift Animation" class="gift-anim-icon" onerror="this.style.display='none'">
-          <p class="physical-gift-text">Ingin mengirimkan kado fisik ke tempat acara?</p>
-          <button class="btn-open-kado-modal" onclick="openKadoAddressModal()">
-            <i class="fa-solid fa-gift"></i> Kirim Kado Fisik
+          <h4 class="gift-card-heading">Kirim Kado Fisik</h4>
+          <p class="gift-card-desc">
+            Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan kado berupa barang/fisik, silakan klik tombol di bawah untuk melihat alamat tujuan pengiriman.
+          </p>
+          <button class="btn-mahogany-outline" onclick="openKadoAddressModal()">
+            <i class="fa-solid fa-location-dot"></i> Lihat Alamat Pengiriman Kado
           </button>
         </div>
       </div>
@@ -480,36 +563,28 @@
          SECTION 7: FOOTER & CLOSING
     =========================================== -->
     <footer id="footer" class="section section-footer text-center">
-      <!-- Wave Bottom Transition -->
-      <div class="wave-footer">
-        <svg viewBox="0 0 1000 100" preserveAspectRatio="none" class="wave-svg">
-          <path fill="#ae8f7a" opacity="0.4" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
-          <path fill="#ae8f7a" opacity="0.7" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
-          <path fill="#ae8f7a" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
-        </svg>
-      </div>
-
-      <div class="footer-inner">
-        <!-- Photo with decorative border -->
-        <div class="photo-frame-wrapper" data-aos="zoom-in">
-          <div class="photo-circle" style="background-image: url('https://media.indoinvite.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_010950041758260433.webp');"></div>
-          <img src="https://indoinvite.com/nikah/template/pandora/pandora-classic/PC-Bor.webp" alt="" class="frame-border">
+      <div class="content-wrapper">
+        <div class="footer-crest" data-aos="zoom-in">
+          <span>A &bull; R</span>
         </div>
 
-        <p class="footer-closing-text" data-aos="fade-up">
-          Merupakan Suatu Kebahagiaan dan Kehormatan bagi Kami, Apabila Bapak/Ibu/Saudara/i, Berkenan Hadir di Acara kami.
+        <p class="footer-verse" data-aos="fade-up">
+          "Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kami."
         </p>
 
-        <h1 class="couple-title footer-couple" data-aos="zoom-in">Evi &amp; Rian</h1>
+        <h1 class="footer-couple-name" data-aos="zoom-in">Astri &amp; Riyan</h1>
+        
+        <p class="footer-family-closing" data-aos="fade-up">
+          Keluarga Besar Bapak Dadi &amp; Ibu Tati<br>
+          Keluarga Besar Bapak Ayat Surdrajat &amp; Ibu Erna Hasanah (Almh)
+        </p>
 
-        <div class="social-links" data-aos="fade-up">
-          <a href="https://instagram.com/Fatimahevi4321" target="_blank" rel="noopener" aria-label="Instagram Evi"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://instagram.com/ri.anhhdyt" target="_blank" rel="noopener" aria-label="Instagram Rian"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+        <div class="footer-divider-ornament"></div>
 
-        <div class="copyright-text">
-          <p>&copy; 2025 The Wedding of Rian &amp; Evi. All rights reserved.</p>
-        </div>
+        <p class="footer-copyright">
+          &copy; 2026 The Wedding of Astri Dianti &amp; Riyan Febriana Fawzi.<br>
+          Dibuat dengan segenap cinta &amp; kebahagiaan.
+        </p>
       </div>
     </footer>
   </main>
@@ -560,7 +635,7 @@
   =============================================== -->
   <div id="toastNotification" class="toast-notification">
     <div class="toast-avatar">
-      <i class="fa-solid fa-envelope"></i>
+      <i class="fa-solid fa-envelope-open-heart"></i>
     </div>
     <div class="toast-body">
       <h5 id="toastAuthor" class="toast-author">Tamu Undangan</h5>
@@ -590,22 +665,22 @@
         <button class="modal-close" onclick="closeKadoModal()">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="modal-text">Untuk Bapak/Ibu/Saudara/i yang ingin mengirimkan kado fisik, kado dapat dikirimkan ke alamat berikut:</p>
+        <p class="modal-text">Untuk Bapak/Ibu/Saudara/i yang ingin mengirimkan kado fisik, silakan kirimkan ke alamat berikut:</p>
         
-        <div class="address-box">
-          <p class="address-recipient"><b>Penerima:</b> Evi Siti Fatimah &amp; Rian Hidayat</p>
-          <p class="address-phone"><b>No. HP / WhatsApp:</b> 081224714665</p>
+        <div class="address-box-mahogany">
+          <p class="address-recipient"><b>Penerima:</b> Astri Dianti &amp; Riyan Febriana Fawzi</p>
+          <p class="address-phone"><b>No. WhatsApp:</b> 0812-2471-4665 (Konfirmasi)</p>
           <p class="address-detail" id="fullAddress">
-            Dusun Sukamaju Rt/Rw 26/12 Desa Talagasari, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat, Kode Pos 46253
+            Dusun Kiaralawang RT 1 / RW 2, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat 46253
           </p>
         </div>
 
-        <button class="btn-copy-address" onclick="copyAddressToClipboard()">
+        <button class="btn-mahogany-solid" onclick="copyAddressToClipboard()">
           <i class="fa-regular fa-copy"></i>
           <span id="btnCopyAddressText">Salin Alamat Lengkap</span>
         </button>
 
-        <a href="https://wa.me/6281224714665?text=Halo%20Evi%20dan%20Rian%2C%20saya%20ingin%20konfirmasi%20pengiriman%20kado%20fisik..." target="_blank" rel="noopener" class="btn-wa-confirm">
+        <a href="https://wa.me/6281224714665?text=Halo%20Astri%20dan%20Riyan%2C%20saya%20ingin%20konfirmasi%20pengiriman%20kado%20fisik..." target="_blank" rel="noopener" class="btn-wa-confirm-mahogany">
           <i class="fa-brands fa-whatsapp"></i> Konfirmasi via WhatsApp
         </a>
       </div>
