@@ -225,8 +225,8 @@ function configureCalendarLink() {
   if (!btnCalendar) return;
 
   const eventTitle = encodeURIComponent("The Wedding of Astri & Riyan");
-  const eventDetails = encodeURIComponent("Pernikahan Astri Dianti & Riyan Febriana Fawzi. Bertempat di Kediaman Mempelai Wanita, Dusun Kiaralawang RT 1/RW 2, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat.");
-  const eventLocation = encodeURIComponent("Kediaman Mempelai Wanita, Dusun Kiaralawang RT 1/RW 2, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat");
+  const eventDetails = encodeURIComponent("Pernikahan Astri Dianti & Riyan Febriana Fawzi. Bertempat di Kediaman Mempelai Wanita, Dusun Kiaralawang RT 1/RW 2 Desa Karangpawitan, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat.");
+  const eventLocation = encodeURIComponent("Kediaman Mempelai Wanita, Dusun Kiaralawang RT 1/RW 2 Desa Karangpawitan, Kecamatan Kawali, Kabupaten Ciamis, Jawa Barat");
   
   const startTime = "20261213T010000Z";
   const endTime = "20261213T100000Z";
