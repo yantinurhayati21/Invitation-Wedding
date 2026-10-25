@@ -770,6 +770,152 @@ body.lock-scroll {
 }
 
 /* --------------------------------------------------------------------------
+   7B. SECTION: OUR LOVE STORY
+   -------------------------------------------------------------------------- */
+.section-story {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.story-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-top: 10px;
+}
+
+.story-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(201, 150, 97, 0.35);
+  border-radius: 20px;
+  padding: 26px 22px 22px 22px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(42, 20, 16, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.story-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(155, 75, 54, 0.15);
+}
+
+.story-card.featured {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF9F4 100%);
+  border: 1.5px solid var(--gold-main);
+  box-shadow: 0 12px 35px rgba(201, 150, 97, 0.2);
+}
+
+.story-badge-wrap {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.story-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(155, 75, 54, 0.1);
+  color: var(--mahogany-terracotta);
+  border: 1px solid rgba(155, 75, 54, 0.25);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-family: var(--font-cinzel);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.story-badge.gold-bg {
+  background: var(--gold-gradient);
+  color: var(--mahogany-deep);
+  border: none;
+  font-weight: 800;
+}
+
+.story-title {
+  font-family: var(--font-cinzel);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--mahogany-deep);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.story-gold-line {
+  width: 45px;
+  height: 2px;
+  background: var(--gold-gradient);
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.story-text {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #4A3A37;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.story-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.story-quote {
+  font-family: var(--font-cormorant);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--mahogany-terracotta);
+  border-left: 3px solid var(--gold-main);
+  padding: 10px 14px;
+  margin-top: 14px;
+  background: rgba(201, 150, 97, 0.08);
+  border-radius: 0 10px 10px 0;
+}
+
+.story-corner-decor {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 1.1rem;
+  color: var(--gold-main);
+  opacity: 0.45;
+}
+
+.story-timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.node-line {
+  width: 2px;
+  height: 24px;
+  background: linear-gradient(180deg, var(--gold-main), rgba(201, 150, 97, 0.3));
+}
+
+.node-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--mahogany-deep);
+  border: 2px solid var(--gold-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  box-shadow: 0 4px 12px rgba(42, 20, 16, 0.25);
+}
+
+/* --------------------------------------------------------------------------
    8. SECTION 3: RANGKAIAN ACARA
    -------------------------------------------------------------------------- */
 .event-mahogany-card {
