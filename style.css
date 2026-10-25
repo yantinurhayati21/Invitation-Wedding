@@ -1261,6 +1261,19 @@ body.lock-scroll {
   pointer-events: none;
 }
 
+.luxury-atm-card.dana-card {
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(17, 142, 234, 0.35) 0%, transparent 55%),
+    linear-gradient(135deg, #1C3348 0%, #15222E 60%, #0D161F 100%);
+  border: 1px solid rgba(17, 142, 234, 0.4);
+  box-shadow: 0 15px 35px rgba(13, 22, 31, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+.luxury-atm-card.dana-card .emv-gold-chip.dana-chip {
+  background: linear-gradient(135deg, #A8DDFF 0%, #118EEA 100%);
+  border-color: rgba(17, 142, 234, 0.4);
+}
+
 .atm-card-inner {
   position: relative;
   z-index: 2;

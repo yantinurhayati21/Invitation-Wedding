@@ -471,7 +471,7 @@ function escapeHtml(str) {
 function copyToClipboard(text, btnElement) {
   navigator.clipboard.writeText(text).then(() => {
     const originalHtml = btnElement.innerHTML;
-    btnElement.innerHTML = `<i class="fa-solid fa-check"></i> <span>Nomor BRI Tersalin!</span>`;
+    btnElement.innerHTML = `<i class="fa-solid fa-check"></i> <span>Berhasil Disalin!</span>`;
     btnElement.style.background = '#2E7D32';
     btnElement.style.color = '#FFFFFF';
 
@@ -489,7 +489,7 @@ function copyToClipboard(text, btnElement) {
     document.body.removeChild(textarea);
 
     const originalHtml = btnElement.innerHTML;
-    btnElement.innerHTML = `<i class="fa-solid fa-check"></i> <span>Nomor BRI Tersalin!</span>`;
+    btnElement.innerHTML = `<i class="fa-solid fa-check"></i> <span>Berhasil Disalin!</span>`;
     btnElement.style.background = '#2E7D32';
     btnElement.style.color = '#FFFFFF';
     setTimeout(() => {
